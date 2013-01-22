@@ -1,0 +1,45 @@
+{
+  "name": "Boilerplatr",
+  "preferGlobal": "true",
+  "version": "0.2.0",
+  "description": "A framework framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "vows test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nick-jonas/Boilerplatr.git"
+  },
+  "bin":{
+    "boiler": "bin/boilerplatr.js"
+  },
+  "keywords": [
+    "framework",
+    "boilerplate",
+    "nodejs",
+    "architecture"
+  ],
+  "dependencies": {
+    "doT": "https://github.com/nick-jonas/doT/tarball/master",
+    "lodash": "latest",
+    "commander": "latest",
+    "minimatch": "0.2.9",
+    "prompt": "latest",
+    "mkdirp": "latest",
+    "fs-extra": ">=0.3.2",
+    "shelljs": ">=0.1.0",
+    "cheerio": ">=0.10.5",
+    "readdirp": ">=0.2.1",
+    "open": ">=0.0.2",
+    "connect": ">=2.7.2"
+  },
+  "devDependencies": {
+    "vows": ">=0.7.0"
+  },
+  "author": "Nick Jonas <nick@modernassembly.co>",
+  "license": "BSD",
+  "engines": {
+    "node": ">=0.6"
+  }
+}

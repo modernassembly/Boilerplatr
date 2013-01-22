@@ -1,0 +1,27 @@
+{
+    "output_file_dir"   : "/",
+    "file_filter"       : ["!.DS_Store", "!thumbs.db"],
+    "dir_filter"        : ["!.svn", "!.git", "!.sass-cache"],
+    "file_renames" : [
+    {
+        "input_file"        : "/boilerplate_template.html",
+        "output_file_dir"   : "app/src/template/sections/",
+        "output_file_name"  : "<%=it.name%>_template.html"
+    },
+    {
+        "input_file"        : "/boilerplate_view.js",
+        "output_file_dir"   : "app/src/views/sections/",
+        "output_file_name"  : "<%=it.name%>View.js"
+    },
+    {
+        "input_file"        : "/boilerplate_style.scss",
+        "output_file_dir"   : "app/sass/sections/",
+        "output_file_name"  : "_<%=it.name%>.scss"
+    },
+    {
+        "input_file"        : "/src/nested/test.js",
+        "output_file_dir"   : "/src/new/section/",
+        "output_file_name"  : "_<%=it.testVar%>.new"
+    }
+    ]
+}

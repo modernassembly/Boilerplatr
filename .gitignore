@@ -1,0 +1,29 @@
+# OS Generated Files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# SASS Generated Files #
+########################
+app/.sass-cache
+app/sass/.sass-cache
+*.scssc
+
+# Node Dependencies #
+#####################
+node_modules
+
+# Development #
+#####################
+dev_scripts
+dev_bed
+
+# Testing #
+#####################
+test/testproj
