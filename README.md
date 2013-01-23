@@ -65,7 +65,8 @@ This will walk you through the creation of `boilerplatr.json`.
 Boilerplatr looks for a directory called `boilers` in the root of your project, unless otherwise specified in your `boilerplatr.json` file.
 
 
-###`boilerplatr.json`
+boilerplatr.json
+----
 
 This file should always be in the root of your project, and allows you to override the default settings.
 
@@ -75,6 +76,4 @@ This file should always be in the root of your project, and allows you to overri
 }
 ```
 
-boilersDir
----
-By default, the commands will look for a `boilers` directory in the root of your project.  If your boilers are located elsewhere, put the location here relative to the path of this project.
+boilersDir: By default, the commands will look for a `boilers` directory in the root of your project.  If your boilers are located elsewhere, put the location here relative to the path of the project root
