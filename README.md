@@ -8,6 +8,8 @@
 
 Everyone's coming out with their own frameworks, but there isn't a standard way of finding/using them or most importantly - *creating your own*.  Once a developer has created their framework, they shouldn't be hassled with creating a scaffold generator for it.  By the time they've finished that, they're already onto a new framework.  Boilerplatr is a simple, framework's framework to allow you to get up and running with a build tool for your boilerplate code *quickly*.
 
+*Note: the term `boilers` refers to the template files a user creates to work with boilerplatr*
+
 ## Requirements
 
 You must install node:
@@ -63,10 +65,16 @@ This will walk you through the creation of `boilerplatr.json`.
 Boilerplatr looks for a directory called `boilers` in the root of your project, unless otherwise specified in your `boilerplatr.json` file.
 
 
-### Config `boilerplatr.json`
+###`boilerplatr.json`
+
+This file should always be in the root of your project, and allows you to override the default settings.
 
 ```json
 {
-    "boilersDir": "boilers/" // path relative to file with boilerplatr template files
+    "boilersDir": "boilers/"
 }
 ```
+
+boilersDir
+---
+By default, the commands will look for a `boilers` directory in the root of your project.  If your boilers are located elsewhere, put the location here relative to the path of this project.
