@@ -10,15 +10,13 @@ Everyone's coming out with their own frameworks, but there isn't a standard way 
 
 ## Requirements
 
-You must have the following installed:
+You must install node:
 
 [nodejs](http://nodejs.org/) >=v0.6.0
 
 ```bash
 $ brew install node
 ```
-
-It's *highly* recommended to have [NPM](http://nodejs.org/download/) to install all dependencies.
 
 
 ## Installation
@@ -32,7 +30,7 @@ $ git clone https://github.com/nick-jonas/boilerplatr.git
 $ npm install -g
 ```
 
-or direct from npm
+or directly from npm
 
 
 ```bash
@@ -67,4 +65,8 @@ Boilerplatr looks for a directory called `boilers` in the root of your project, 
 
 ### Config `boilerplatr.json`
 
-TODO
+```json
+{
+    "boilersDir": "boilers/" // path relative to file with boilerplatr template files
+}
+```
