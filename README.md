@@ -8,13 +8,14 @@
 
 Everyone's coming out with their own frameworks, but there isn't a standard way of finding/using them or most importantly - *creating your own*.  Once a developer has created their framework, they shouldn't be hassled with creating a scaffold generator for it.  By the time they've finished that, they're already onto a new framework.  Boilerplatr is a simple, framework's framework to allow you to get up and running with a build tool for your boilerplate code *quickly*.
 
-*Note: the term `boilers` refers to the template files a user creates to work with boilerplatr*
+*Note: the term `boilers` below will refer to the template files a user creates to work with boilerplatr*
 
 ## Requirements
 
-You must install node:
+You must have [nodejs](http://nodejs.org/) installed, tested for v.0.6.0 or higher.
 
-[nodejs](http://nodejs.org/) >=v0.6.0
+
+Using Homebrew:
 
 ```bash
 $ brew install node
@@ -23,7 +24,7 @@ $ brew install node
 
 ## Installation
 
-*Note*: this tool is meant to be installed as a global package, so make sure to use the `-g` flag when installing
+*Note*: this tool is meant to be installed as a global package, so make sure to use the `-g` flag to make sure it's placed in your system's bin directory.
 
 clone the repo
 
@@ -39,21 +40,12 @@ or directly from npm
 $ npm install -g boilerplatr
 ```
 
-## How to use
-
-### Create your boilers
-
-#### structure
-
-#### templating
-
-#### filters
+## Create a Boiler
 
 
+##Creating a project with your Boilers.
 
-### Creating a project with your boilers.
-
-Initialize your project with
+Run this command at the root of your project
 
 ```bash
 
@@ -72,7 +64,7 @@ This file should always be in the root of your project, and allows you to overri
 
 ```json
 {
-    "boilersDir": "boilers/"
+    "boilersDir": "./boilers"
 }
 ```
 

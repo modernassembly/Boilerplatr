@@ -42,11 +42,10 @@ if(fs.existsSync(configFilePath)){
 }
 
 var execute = function(){
-    // command: watch
-    if(program.watch){
+    if(program.watch){ /// watch: TODO
         commands.watch.execute();
     }
-    else if(program.build){
+    else if(program.build){ /// build: TODO
         commands.build.execute();
     }
     else{
