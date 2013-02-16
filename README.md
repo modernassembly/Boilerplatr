@@ -57,14 +57,20 @@ This will walk you through the creation of `boilerplatr.json`.
 Boilerplatr looks for a directory called `boilers` in the root of your project, unless otherwise specified in your `boilerplatr.json` file.
 
 
-boilerplatr.json
+,boilerconfig
 ----
 
 This file should always be in the root of your project, and allows you to override the default settings.
 
 ```json
 {
-    "boilersDir": "./boilers"
+    "packageName":      "myboiler",
+    "version":          "0.0.0",
+    "output_file_dir":  ".",
+    "file_filter":      ["!.DS_Store", "!thumbs.db"],
+    "dir_filter":       ["!.svn", "!.git", "!.sass-cache"],
+    "file_mapping":     [],
+    "var_mapping":      {}
 }
 ```
 
