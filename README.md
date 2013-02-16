@@ -2,25 +2,17 @@
 
 #Boilerplatr
 
-##### A nodejs build tool for your own frameworks.  Manage your boilerplate code a little easier.
+##### A dead simple nway to manage, publish, and share your boilerplate files.  
 
 ## About
 
-Everyone's coming out with their own frameworks, but there isn't a standard way of finding/using them or most importantly - *creating your own*.  Once a developer has created their framework, they shouldn't be hassled with creating a scaffold generator for it.  By the time they've finished that, they're already onto a new framework.  Boilerplatr is a simple, framework's framework to allow you to get up and running with a build tool for your boilerplate code *quickly*.
+Everyone's coming out with their own frameworks, but there isn't a standard way of finding and using them.  Once a developer has created their framework, they shouldn't be hassled with creating a scaffold generator for it.  By the time they've finished that, they're already onto a new framework.  Boilerplatr is a simple package mananger built on nodejs to allow you to get up and running with *quickly*, with as little as possible overhead.
 
 *Note: the term `boilers` below will refer to the template files a user creates to work with boilerplatr*
 
 ## Requirements
 
-You must have [nodejs](http://nodejs.org/) installed, tested for v.0.6.0 or higher.
-
-
-Using Homebrew:
-
-```bash
-$ brew install node
-```
-
+You must have [nodejs](http://nodejs.org/) installed, tested for v.0.6.0 or higher.  [Here is a guide](http://howtonode.org/how-to-install-nodejs) for how to install nodejs on your system. 
 
 ## Installation
 
@@ -52,7 +44,7 @@ Run this command at the root of your project
 $ boiler init
 ```
 
-This will walk you through the creation of `boilerplatr.json`.
+This will walk you through the creation of `.boilerconfig`.
 
 Boilerplatr looks for a directory called `boilers` in the root of your project, unless otherwise specified in your `boilerplatr.json` file.
 
