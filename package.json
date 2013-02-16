@@ -32,7 +32,8 @@
     "cheerio": ">=0.10.5",
     "readdirp": ">=0.2.1",
     "open": ">=0.0.2",
-    "connect": ">=2.7.2"
+    "connect": ">=2.7.2",
+    "validator":">=0.4.24"
   },
   "devDependencies": {
     "vows": ">=0.7.0"

@@ -8,10 +8,14 @@ var commands = require('../lib/commands'),
     fs = require('fs'),
     current_directory = path.normalize(process.cwd());
 
+// follow npm's command list
+// http://howtonode.org/introduction-to-npm
 // initialize program
 program
     .version('0.0.1')
-    .option('-i, --init', 'Initialize a project using Boilerplatr')
+    .option('-i, --init', 'Initialize a boiler')
+    .option('-p, --publish', 'Publish a boiler')
+    .option('-l, --list', 'List boilers')
     // .option('-w, --watch', 'Watch an AssembleJS project')
     // .option('-b, --build', 'Build production-ready files')
     .parse(process.argv);
@@ -25,20 +29,17 @@ var config = {
     boilersDir: path.resolve(current_directory, 'boilers/')
 };
 
-// read config if available & override
-var configFilePath = path.join(current_directory, 'boilerplatr.json');
-if(fs.existsSync(configFilePath)){
-    fs.readFile(configFilePath, function(err, file){
-        var userConfig = JSON.parse(file.toString());
-        // resolve paths
-        if(userConfig.boilersDir){
-            userConfig.boilersDir = path.resolve(current_directory, userConfig.boilersDir);
-        }
-        config = _.extend(config, userConfig);
-        execute();
-    });
-}else{
-    execute();
+if(program.init){
+    commands.init.execute();
+}
+else if(program.publish){
+    commands.publish.execute();
+}
+else if(program.list){
+    commands.list.execute();
+}
+else{
+    // execute boiler
 }
 
 var execute = function(){
