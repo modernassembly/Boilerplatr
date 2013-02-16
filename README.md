@@ -12,7 +12,7 @@ Everyone's coming out with their own frameworks, but there isn't a standard way 
 
 ## Requirements
 
-You must have [nodejs](http://nodejs.org/) installed, tested for v.0.6.0 or higher.  [Here is a guide](http://howtonode.org/how-to-install-nodejs) for how to install nodejs on your system. 
+You must have [nodejs](http://nodejs.org/) installed, tested for v.0.6.0 or higher.  [Here is a guide](http://howtonode.org/how-to-install-nodejs) for how to install it on your system. 
 
 ## Installation
 
