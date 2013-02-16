@@ -43,22 +43,14 @@ else{
 }
 
 var execute = function(){
-    if(program.watch){ /// watch: TODO
-        commands.watch.execute();
-    }
-    else if(program.build){ /// build: TODO
-        commands.build.execute();
-    }
-    else{
-        var template = program.args[0],
-            templateDir = path.join(config.boilersDir, template);
-        if(fs.existsSync(templateDir)){
-            commands.write.execute(templateDir, function(err, vars, result){
-                if(err) throw err;
-                console.log('✓ Successfully completed ' + template.green);
-            });
-        }else{
-            console.error('Template directory \'' + template.red + '\' does not exist in ' + templateDir);
-        }
+    var template = program.args[0],
+        templateDir = path.join(config.boilersDir, template);
+    if(fs.existsSync(templateDir)){
+        commands.write.execute(templateDir, function(err, vars, result){
+            if(err) throw err;
+            console.log('✓ Successfully completed ' + template.green);
+        });
+    }else{
+        console.error('Template directory \'' + template.red + '\' does not exist in ' + templateDir);
     }
 };
