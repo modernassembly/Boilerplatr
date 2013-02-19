@@ -24,9 +24,17 @@ program
 // prompt.message + prompt.delimiter + property.message + prompt.delimiter;
 prompt.message = 'Boilerplatr'.magenta;
 
-// set config defaults
-var config = {
-    boilersDir: path.resolve(current_directory, 'boilers/')
+var execute = function(){
+    var template = program.args[0],
+        templateDir = path.join(path.resolve(__dirname + '/../node_modules/'), template);
+    if(fs.existsSync(templateDir)){
+        commands.write.execute(templateDir, function(err, vars, result){
+            if(err) throw err;
+            console.log('✓ Successfully completed ' + template.green);
+        });
+    }else{
+        console.error('Template directory \'' + template.red + '\' does not exist in ' + templateDir);
+    }
 };
 
 if(program.init){
@@ -39,18 +47,5 @@ else if(program.list){
     commands.list.execute();
 }
 else{
-    // execute boiler
+    execute();
 }
-
-var execute = function(){
-    var template = program.args[0],
-        templateDir = path.join(config.boilersDir, template);
-    if(fs.existsSync(templateDir)){
-        commands.write.execute(templateDir, function(err, vars, result){
-            if(err) throw err;
-            console.log('✓ Successfully completed ' + template.green);
-        });
-    }else{
-        console.error('Template directory \'' + template.red + '\' does not exist in ' + templateDir);
-    }
-};
