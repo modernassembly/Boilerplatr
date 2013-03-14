@@ -14,10 +14,7 @@ var commands = require('../lib/commands'),
 program
     .version('0.0.1')
     .option('-i, --init', 'Initialize a boiler')
-    .option('-p, --publish', 'Publish a boiler')
     .option('-l, --list', 'List boilers')
-    // .option('-w, --watch', 'Watch an AssembleJS project')
-    // .option('-b, --build', 'Build production-ready files')
     .parse(process.argv);
 
 // customize prompt message
@@ -39,9 +36,6 @@ var execute = function(){
 
 if(program.init){
     commands.init.execute();
-}
-else if(program.publish){
-    commands.publish.execute();
 }
 else if(program.list){
     commands.list.execute();

@@ -1,0 +1,79 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'link', 'npm' ]
+2 info using npm@1.2.14
+3 info using node@v0.10.0
+4 info /Users/Jonas/Projects/repo/Boilerplatr/node_modules/npm unbuild
+5 verbose read json /Users/Jonas/Projects/repo/Boilerplatr/node_modules/npm/package.json
+6 verbose link symlinking /usr/local/lib/node_modules/npm to /Users/Jonas/Projects/repo/Boilerplatr/node_modules/npm
+7 info build /Users/Jonas/Projects/repo/Boilerplatr/node_modules/npm
+8 verbose read json /Users/Jonas/Projects/repo/Boilerplatr/node_modules/npm/package.json
+9 info preinstall npm@1.2.14
+10 verbose linkStuff [ false,
+10 verbose linkStuff   false,
+10 verbose linkStuff   false,
+10 verbose linkStuff   '/Users/Jonas/Projects/repo/Boilerplatr/node_modules' ]
+11 info linkStuff npm@1.2.14
+12 warn prefer global npm@1.2.14 should be installed with -g
+13 verbose linkBins npm@1.2.14
+14 verbose link bins [ { npm: './bin/npm-cli.js' },
+14 verbose link bins   '/Users/Jonas/Projects/repo/Boilerplatr/node_modules/.bin',
+14 verbose link bins   false ]
+15 verbose linkMans npm@1.2.14
+16 verbose rebuildBundles npm@1.2.14
+17 verbose rebuildBundles [ '.bin',
+17 verbose rebuildBundles   'abbrev',
+17 verbose rebuildBundles   'ansi',
+17 verbose rebuildBundles   'archy',
+17 verbose rebuildBundles   'block-stream',
+17 verbose rebuildBundles   'chmodr',
+17 verbose rebuildBundles   'chownr',
+17 verbose rebuildBundles   'fstream',
+17 verbose rebuildBundles   'fstream-npm',
+17 verbose rebuildBundles   'glob',
+17 verbose rebuildBundles   'graceful-fs',
+17 verbose rebuildBundles   'inherits',
+17 verbose rebuildBundles   'ini',
+17 verbose rebuildBundles   'init-package-json',
+17 verbose rebuildBundles   'lockfile',
+17 verbose rebuildBundles   'lru-cache',
+17 verbose rebuildBundles   'minimatch',
+17 verbose rebuildBundles   'mkdirp',
+17 verbose rebuildBundles   'node-gyp',
+17 verbose rebuildBundles   'nopt',
+17 verbose rebuildBundles   'npm-registry-client',
+17 verbose rebuildBundles   'npmconf',
+17 verbose rebuildBundles   'npmlog',
+17 verbose rebuildBundles   'once',
+17 verbose rebuildBundles   'opener',
+17 verbose rebuildBundles   'osenv',
+17 verbose rebuildBundles   'read',
+17 verbose rebuildBundles   'read-installed',
+17 verbose rebuildBundles   'read-package-json',
+17 verbose rebuildBundles   'request',
+17 verbose rebuildBundles   'retry',
+17 verbose rebuildBundles   'rimraf',
+17 verbose rebuildBundles   'semver',
+17 verbose rebuildBundles   'slide',
+17 verbose rebuildBundles   'tar',
+17 verbose rebuildBundles   'uid-number',
+17 verbose rebuildBundles   'which' ]
+18 verbose rebuild bundle /Users/Jonas/Projects/repo/Boilerplatr/node_modules/npm/node_modules/abbrev
+19 info build /Users/Jonas/Projects/repo/Boilerplatr/node_modules/npm/node_modules/abbrev
+20 verbose read json /Users/Jonas/Projects/repo/Boilerplatr/node_modules/npm/node_modules/abbrev/package.json
+21 info preinstall abbrev@1.0.4
+22 error Error: EPERM, chmod '/Users/Jonas/Projects/repo/Boilerplatr/node_modules/npm/bin/npm-cli.js'
+22 error  { [Error: EPERM, chmod '/Users/Jonas/Projects/repo/Boilerplatr/node_modules/npm/bin/npm-cli.js']
+22 error   errno: 50,
+22 error   code: 'EPERM',
+22 error   path: '/Users/Jonas/Projects/repo/Boilerplatr/node_modules/npm/bin/npm-cli.js' }
+23 error Please try running this command again as root/Administrator.
+24 error System Darwin 12.2.1
+25 error command "node" "/usr/local/bin/npm" "link" "npm"
+26 error cwd /Users/Jonas/Projects/repo/Boilerplatr
+27 error node -v v0.10.0
+28 error npm -v 1.2.14
+29 error path /Users/Jonas/Projects/repo/Boilerplatr/node_modules/npm/bin/npm-cli.js
+30 error code EPERM
+31 error errno 50
+32 error stack Error: EPERM, chmod '/Users/Jonas/Projects/repo/Boilerplatr/node_modules/npm/bin/npm-cli.js'
+33 verbose exit [ 50, true ]
