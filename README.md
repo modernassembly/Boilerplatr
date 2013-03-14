@@ -2,7 +2,7 @@
 
 #Boilerplatr
 
-##### A dead simple nway to manage, publish, and share your boilerplate files.  
+##### A dead simple nway to manage, publish, and share your boilerplate files.
 
 ## About
 
@@ -12,7 +12,7 @@ Everyone's coming out with their own frameworks, but there isn't a standard way 
 
 ## Requirements
 
-You must have [nodejs](http://nodejs.org/) installed, tested for v.0.6.0 or higher.  [Here is a guide](http://howtonode.org/how-to-install-nodejs) for how to install it on your system. 
+You must have [nodejs](http://nodejs.org/) installed, tested for v.0.6.0 or higher.  [Here is a guide](http://howtonode.org/how-to-install-nodejs) for how to install it on your system.
 
 ## Installation
 
@@ -49,21 +49,55 @@ This will walk you through the creation of `.boilerconfig`.
 Boilerplatr looks for a directory called `boilers` in the root of your project, unless otherwise specified in your `boilerplatr.json` file.
 
 
-,boilerconfig
+package.json
 ----
 
-This file should always be in the root of your project, and allows you to override the default settings.
+A `package.json` file is required to be in the root of your file, which allows your template to work with [NPM](https://npmjs.org/).  The command `boiler init` will walk you through the file setup for this.
+
+Bare minimum requirement:
 
 ```json
 {
-    "packageName":      "myboiler",
-    "version":          "0.0.0",
-    "output_file_dir":  ".",
-    "file_filter":      ["!.DS_Store", "!thumbs.db"],
-    "dir_filter":       ["!.svn", "!.git", "!.sass-cache"],
-    "file_mapping":     [],
-    "var_mapping":      {}
+    "name":      "my-template",  // your boiler name
+    "version":   "0.0.1",        // your boiler version number
+    "boiler": {}
 }
 ```
 
-boilersDir: By default, the commands will look for a `boilers` directory in the root of your project.  If your boilers are located elsewhere, put the location here relative to the path of the project root
+
+A more advanced setup:
+
+```json
+{
+    "name":      "my-template",  // your boiler name
+    "version":   "0.0.1",        // your boiler version number
+    "boiler": {
+        "output_file_dir": "./",  // outputs the template to the current directory
+        "file_filter":      ["!.DS_Store", "!thumbs.db"],  // filter these files from output
+        "dir_filter":       ["!.svn", "!.git", "!.sass-cache"], // filter these directories from output
+        "file_mapping":     [
+            {
+                // this will prompt the user for a plugin name
+                // with user input 'myPlugin', the output file
+                // will be '/js/myPlugin.jquery.js'
+
+                "input":    "/js/example.jquery.js",
+                "output":   "/js/<%= boiler.pluginName %>.jquery.js"
+            }
+        ],
+        "var_mapping":      {
+
+            // for each variable in your template, you can define how
+            // how the user prompt will display.  the user is prompted
+            // with the 'description' field, and you can restrict their
+            // input with the 'type' field, while also provide a default
+
+            "pluginName":{
+                "description": "Enter the name of your jQuery plugin",
+                "type": "string",
+                "default": "example"
+            }
+        }
+    }
+}
+```
