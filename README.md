@@ -101,3 +101,5 @@ A more advanced setup:
     }
 }
 ```
+
+**name**: your boiler name
