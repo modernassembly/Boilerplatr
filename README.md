@@ -4,7 +4,7 @@
 
 ## About
 
-Everyone's coming out with their own frameworks, but there isn't a standard way of finding and using them.  Once a developer has created their framework, they shouldn't be hassled with creating a scaffold generator for it.  By the time they've finished that, they're already onto a new framework.  Boilerplatr is a simple package mananger built on nodejs to allow you to get up and running with *quickly*, with as little as possible overhead.
+Everyone's coming out with their own frameworks, but there isn't a standard way of finding and using them.  Once a developer has created their framework, they shouldn't be hassled with creating a scaffold generator for it.  By the time they've finished that, they're already onto a new framework.  Boilerplatr is built on top of [NPM](https://npmjs.org/) to allow you to get up and running with *quickly*, with as little as possible overhead.
 
 *Note: the term `boilers` below will refer to the template files a user creates to work with boilerplatr*
 
@@ -58,13 +58,13 @@ $ boiler publish
 package.json
 ----
 
-A `package.json` file is required to be in the root of your file, which allows your template to work with [NPM](https://npmjs.org/).  The command `boiler init` will walk you through the file setup for this.
+A `package.json` file is required to be in the root of your file, which allows your boiler to work with [NPM](https://npmjs.org/).  The command `boiler init` will walk you through the file setup for this.
 
 Bare minimum requirement:
 
 ```json
 {
-    "name":      "my-template",
+    "name":      "my-boiler",
     "version":   "0.0.1",
     "boiler": {}
 }
@@ -75,7 +75,7 @@ Here is a more advanced setup:
 
 ```json
 {
-    "name":      "my-template",
+    "name":      "my-boiler",
     "version":   "0.0.1",
     "boiler": {
         "output_file_dir": "./",
@@ -103,7 +103,7 @@ Here is a more advanced setup:
 With the above `package.json` setup, here is an example command-line scenario:
 
 ```bash
-$ boiler my-template
+$ boiler my-boiler
 Boilerplatr: Enter the name of your jQuery plugin (example):
 $ myWonderfulPlugin
 ```
