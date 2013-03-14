@@ -42,7 +42,7 @@ This will walk you through the creation of `package.json`.
 
 Now you can get started with creating your boilerplate files. Place all your template files relative to the root, where `package.json` is.  The [dOT templating system](http://olado.github.com/doT/index.html) is used throughout all your files, including your config in `package.json`.
 
-When you're done, you can use this command to use your boiler.
+When you're done, you can use this command to use your boiler.  *(Note: this is referencing the name used in `package.json`)*
 
 ```bash
 $ boiler name-of-your-boiler
