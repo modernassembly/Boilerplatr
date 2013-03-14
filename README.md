@@ -1,8 +1,6 @@
-[![Build Status](https://travis-ci.org/nick-jonas/boilerplatr.png?branch=master)](https://travis-ci.org/nick-jonas/boilerplatr)
-
 #Boilerplatr
 
-##### A dead simple nway to manage, publish, and share your boilerplate files.
+##### A dead simple way to manage, publish, and share your boilerplate files.
 
 ## About
 
@@ -44,9 +42,7 @@ Run this command at the root of your project
 $ boiler init
 ```
 
-This will walk you through the creation of `.boilerconfig`.
-
-Boilerplatr looks for a directory called `boilers` in the root of your project, unless otherwise specified in your `boilerplatr.json` file.
+This will walk you through the creation of `package.json`.
 
 
 package.json
@@ -92,7 +88,9 @@ Here is a more advanced setup:
 }
 ```
 
-Here is an example use-case with this `package.json` file:
+###Use Case
+
+With the above `package.json` setup, here is an example command-line scenario:
 
 ```bash
 $ boiler my-template
@@ -100,9 +98,7 @@ Boilerplatr: Enter the name of your jQuery plugin (example):
 $ myWonderfulPlugin
 ```
 
-The user is required to type in a String value, in this case, "myWonderfulPlugin", and this value is used everywhere that `<%= boiler.pluginName %>` is found in the template files.  
-
-`/js/example.jquery.js` will also be outputted to `/js/myWonderfulPlugin.jquery.js`
+The user is required to type in a String value, in this case, "myWonderfulPlugin", and this value is used everywhere that `<%= boiler.pluginName %>` is found in the template files. (i.e. `/js/example.jquery.js` will also be outputted to `/js/myWonderfulPlugin.jquery.js`)
 
 
 ###Config
