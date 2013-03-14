@@ -35,13 +35,24 @@ $ npm install -g boilerplatr
 Run this command at the root of your project
 
 ```bash
-
 $ boiler init
 ```
 
 This will walk you through the creation of `package.json`.
 
-Now you can get started with creating your boilerplate files. Place all your template files relative to the root, where `package.json` is.  The  [dOT templating system](http://olado.github.com/doT/index.html) is used throughout all your files, including your config in `package.json`.  
+Now you can get started with creating your boilerplate files. Place all your template files relative to the root, where `package.json` is.  The [dOT templating system](http://olado.github.com/doT/index.html) is used throughout all your files, including your config in `package.json`.
+
+When you're done, you can use this command to use your boiler.
+
+```bash
+$ boiler name-of-your-boiler
+```
+
+Run this command to publish your project for other people to use.
+
+```bash
+$ boiler publish
+```
 
 
 package.json
@@ -64,11 +75,11 @@ Here is a more advanced setup:
 
 ```json
 {
-    "name":      "my-template", 
+    "name":      "my-template",
     "version":   "0.0.1",
     "boiler": {
         "output_file_dir": "./",
-        "file_filter":      ["!.DS_Store", "!thumbs.db"], 
+        "file_filter":      ["!.DS_Store", "!thumbs.db"],
         "dir_filter":       ["!.svn", "!.git", "!.sass-cache"],
         "file_mapping":     [
             {
