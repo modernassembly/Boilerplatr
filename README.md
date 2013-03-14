@@ -105,8 +105,7 @@ The user is required to type in a String value, in this case, "myWonderfulPlugin
 `/js/example.jquery.js` will also be outputted to `/js/myWonderfulPlugin.jquery.js`
 
 
-***Config***
-
+###Config
 
 
 * **name** : your boiler name
