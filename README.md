@@ -69,10 +69,10 @@ A more advanced setup:
 
 ```json
 {
-    "name":      "my-template",  // your boiler name
-    "version":   "0.0.1",        // your boiler version number
+    "name":      "my-template", 
+    "version":   "0.0.1",
     "boiler": {
-        "output_file_dir": "./",  // outputs the template to the current directory
+        "output_file_dir": "./",
         "file_filter":      ["!.DS_Store", "!thumbs.db"],  // filter these files from output
         "dir_filter":       ["!.svn", "!.git", "!.sass-cache"], // filter these directories from output
         "file_mapping":     [
@@ -102,4 +102,9 @@ A more advanced setup:
 }
 ```
 
-**name**: your boiler name
+*name* : your boiler name
+*version* : your boiler version number
+*boiler* : {
+    **output_file_dir** : outputs the template to the current directory
+}
+
