@@ -13,8 +13,9 @@ var commands = require('../lib/commands'),
 // initialize program
 program
     .version('0.0.1')
-    .option('-i, --init', 'Initialize a boiler')
-    .option('-l, --list', 'List boilers')
+    .option('-i, --init', 'Initialize package.json')
+    .option('-l, --list', 'List installed boilers (both globally and locally)')
+    .option('-p, --publish', 'Publish boiler to NPM')
     .parse(process.argv);
 
 // customize prompt message
@@ -39,6 +40,10 @@ if(program.init){
 }
 else if(program.list){
     commands.list.execute();
+}
+else if(program.publish){
+    // TO DO
+    // use npm api to publish this boiler
 }
 else{
     execute();
