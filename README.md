@@ -58,14 +58,14 @@ Bare minimum requirement:
 
 ```json
 {
-    "name":      "my-template",  // your boiler name
-    "version":   "0.0.1",        // your boiler version number
+    "name":      "my-template",
+    "version":   "0.0.1",
     "boiler": {}
 }
 ```
 
 
-A more advanced setup:
+Here is a more advanced setup:
 
 ```json
 {
@@ -73,25 +73,15 @@ A more advanced setup:
     "version":   "0.0.1",
     "boiler": {
         "output_file_dir": "./",
-        "file_filter":      ["!.DS_Store", "!thumbs.db"],  // filter these files from output
-        "dir_filter":       ["!.svn", "!.git", "!.sass-cache"], // filter these directories from output
+        "file_filter":      ["!.DS_Store", "!thumbs.db"], 
+        "dir_filter":       ["!.svn", "!.git", "!.sass-cache"],
         "file_mapping":     [
             {
-                // this will prompt the user for a plugin name
-                // with user input 'myPlugin', the output file
-                // will be '/js/myPlugin.jquery.js'
-
                 "input":    "/js/example.jquery.js",
                 "output":   "/js/<%= boiler.pluginName %>.jquery.js"
             }
         ],
         "var_mapping":      {
-
-            // for each variable in your template, you can define how
-            // how the user prompt will display.  the user is prompted
-            // with the 'description' field, and you can restrict their
-            // input with the 'type' field, while also provide a default
-
             "pluginName":{
                 "description": "Enter the name of your jQuery plugin",
                 "type": "string",
@@ -102,9 +92,33 @@ A more advanced setup:
 }
 ```
 
-*name* : your boiler name
-*version* : your boiler version number
-*boiler* : {
-    **output_file_dir** : outputs the template to the current directory
-}
+Here is an example use-case with this `package.json` file:
 
+```bash
+$ boiler my-template
+Boilerplatr: Enter the name of your jQuery plugin (example)"
+$ myWonderfulPlugin
+```
+
+The user is required to type in a String value, and this value is used everywhere that `<%= boiler.pluginName %>` is found in the template files.  
+
+`/js/example.jquery.js` will also be outputted to `/js/myWonderfulPlugin.jquery.js`
+
+
+***Config***
+
+
+
+* name : your boiler name
+* version : your boiler version number
+* boiler
+    * output_file_dir : outputs the template to the current directory
+    * file_filter : outputs the template to the current directory
+    * dir_filter : outputs the template to the current directory
+    * file_mapping : an array of file mapping objects
+        * Each file_mapping object has an `input` and `output` property.  The `input` is the path to the original file, and the `output` is the filename after the templating is done.  You can also use <%= boiler.myFileName %> templating here to make this more dynamic.
+    * var_mapping : a collection of var_mapping objects
+        * name of the variable
+            * description :  the prompt that the user will see
+            * type : type restrictions on user input
+            * default : offer a default value to the user
