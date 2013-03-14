@@ -96,11 +96,11 @@ Here is an example use-case with this `package.json` file:
 
 ```bash
 $ boiler my-template
-Boilerplatr: Enter the name of your jQuery plugin (example)"
+Boilerplatr: Enter the name of your jQuery plugin (example):
 $ myWonderfulPlugin
 ```
 
-The user is required to type in a String value, and this value is used everywhere that `<%= boiler.pluginName %>` is found in the template files.  
+The user is required to type in a String value, in this case, "myWonderfulPlugin", and this value is used everywhere that `<%= boiler.pluginName %>` is found in the template files.  
 
 `/js/example.jquery.js` will also be outputted to `/js/myWonderfulPlugin.jquery.js`
 
@@ -109,13 +109,13 @@ The user is required to type in a String value, and this value is used everywher
 
 
 
-* name : your boiler name
-* version : your boiler version number
-* boiler
-    * output_file_dir : outputs the template to the current directory
-    * file_filter : outputs the template to the current directory
-    * dir_filter : outputs the template to the current directory
-    * file_mapping : an array of file mapping objects
+* ##name : your boiler name
+* ##version : your boiler version number
+* ##boiler
+    * ###output_file_dir : outputs the template to the current directory
+    * ###file_filter : outputs the template to the current directory
+    * ###dir_filter : outputs the template to the current directory
+    * ###file_mapping : an array of file mapping objects
         * Each file_mapping object has an `input` and `output` property.  The `input` is the path to the original file, and the `output` is the filename after the templating is done.  You can also use <%= boiler.myFileName %> templating here to make this more dynamic.
     * var_mapping : a collection of var_mapping objects
         * name of the variable
